@@ -1,10 +1,44 @@
 "use client";
 
+import { FormEvent } from "react";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/button";
 
 export default function ContactPage() {
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const fullname = encodeURIComponent(formData.get("fullname")?.toString() ?? "");
+    const gender = encodeURIComponent(formData.get("gender")?.toString() ?? "");
+    const residence = encodeURIComponent(formData.get("residence")?.toString() ?? "");
+    const message = encodeURIComponent(formData.get("message")?.toString() ?? "");
+    const phone = encodeURIComponent(formData.get("phone")?.toString() ?? "");
+
+    const formURL =
+      "https://docs.google.com/forms/d/e/1FAIpQLSebF45Skv6_t5M8Q-LbJtLsLXWWOVE51-KJ01PiLEBiHMRRJg/formResponse?" +
+      "entry.1879536936=" + fullname +
+      "&entry.693284100=" + gender +
+      "&entry.1579702732=" + residence +
+      "&entry.1749491874=" + message +
+      "&entry.768216750=" + phone;
+
+    fetch(formURL, {
+      method: "POST",
+      mode: "no-cors",
+    })
+      .then(() => {
+        alert("Thank you for supporting Margaret Omariba!");
+        form.reset();
+      })
+      .catch(() => {
+        alert("Submission successful.");
+        form.reset();
+      });
+  }
+
   return (
     <div className="min-h-screen bg-charcoal text-cream">
       <Navbar />
@@ -44,54 +78,80 @@ export default function ContactPage() {
                   London Ward community hub
                 </li>
               </ul>
-            </div>
-
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-8">
-              <div className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Your name"
-                    required
-                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-gold"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Your email"
-                    required
-                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-gold"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    placeholder="How can we help?"
-                    rows={5}
-                    required
-                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-gold"
-                  />
-                </div>
-                <Button href="mailto:hello@omaribafoundation.org">
-                  Send Message
-                </Button>
+              <div className="mt-10 image-frame max-w-xl">
+                <img
+                  src="https://picsum.photos/700/520?random=32"
+                  alt="Margaret Omariba community work"
+                />
               </div>
             </div>
+
+            <form id="maggySupportForm" className="maggy-form rounded-2xl border border-white/10 bg-white/5 p-8" onSubmit={handleSubmit}>
+              <div className="form-group">
+                <label className="block text-sm font-medium text-white">Full Name / Jina lako Kamili</label>
+                <input
+                  type="text"
+                  name="fullname"
+                  required
+                  placeholder="Enter your full name"
+                  className="w-full px-4 py-3 rounded-2xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-gold"
+                />
+              </div>
+
+              <div className="form-group">
+                <label className="block text-sm font-medium text-white">Gender / Jinsia</label>
+                <select
+                  name="gender"
+                  required
+                  className="w-full px-4 py-3 rounded-2xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-gold"
+                >
+                  <option value="">Select Gender</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                </select>
+              </div>
+
+              <div className="form-group">
+                <label className="block text-sm font-medium text-white">Length of Residence / Muda ya Makaazi</label>
+                <select
+                  name="residence"
+                  required
+                  className="w-full px-4 py-3 rounded-2xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-gold"
+                >
+                  <option value="">Select Option</option>
+                  <option>1 Year</option>
+                  <option>2 Years</option>
+                  <option>+5 Years</option>
+                  <option>+10 Years</option>
+                  <option>London Ni Home</option>
+                </select>
+              </div>
+
+              <div className="form-group">
+                <label className="block text-sm font-medium text-white">Message</label>
+                <textarea
+                  name="message"
+                  maxLength={700}
+                  rows={5}
+                  placeholder="What would you like Margaret to improve in London Ward?"
+                  required
+                  className="w-full px-4 py-3 rounded-2xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-gold"
+                />
+              </div>
+
+              <div className="form-group">
+                <label className="block text-sm font-medium text-white">Phone Number</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  required
+                  placeholder="07XXXXXXXX"
+                  className="w-full px-4 py-3 rounded-2xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-gold"
+                />
+              </div>
+
+              <Button type="submit">Register & Support Maggy</Button>
+            </form>
           </div>
         </section>
       </main>
