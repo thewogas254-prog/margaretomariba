@@ -72,6 +72,30 @@ export function Navbar() {
               </svg>
             </a>
             <a
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-8 w-8 items-center justify-center text-white transition hover:text-gold"
+              aria-label="Instagram"
+            >
+              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5A4.25 4.25 0 0020.5 16.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5z" />
+                <path d="M12 7.25a4.75 4.75 0 110 9.5 4.75 4.75 0 010-9.5zm0 1.5a3.25 3.25 0 100 6.5 3.25 3.25 0 000-6.5z" />
+                <path d="M17.75 6.5a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-8 w-8 items-center justify-center text-white transition hover:text-gold"
+              aria-label="LinkedIn"
+            >
+              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4v15h-4V8zm7.9 0h3.8v2.07h.05c.53-1 1.82-2.07 3.75-2.07 4.01 0 4.75 2.64 4.75 6.08V23h-4v-7.56c0-1.8-.03-4.12-2.5-4.12-2.5 0-2.88 1.95-2.88 3.98V23h-4V8z" />
+              </svg>
+            </a>
+            <a
               href="https://wa.me/1234567890"
               target="_blank"
               rel="noopener noreferrer"
