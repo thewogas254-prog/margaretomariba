@@ -43,7 +43,7 @@ export default function FoundationPage() {
                   </li>
                 </ul>
               </div>
-              <div className="rounded-[2rem] overflow-hidden border border-white/10 bg-white/5">
+              <div className="image-frame">
                 <Image
                   src="/images/profilephoto2.jpeg"
                   alt="Margaret Omariba profile"

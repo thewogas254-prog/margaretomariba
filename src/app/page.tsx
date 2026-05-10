@@ -125,7 +125,7 @@ export default function Home() {
                   Through the Margaret Omariba Foundation, we deliver practical programs that support youth, women, the environment, sports, and community health across the ward.
                 </p>
               </div>
-              <div className="rounded-[2rem] overflow-hidden border border-white/10 bg-white/5">
+              <div className="image-frame">
                 <Image
                   src="/images/profilephoto2.jpeg"
                   alt="Margaret Omariba leading foundation programs"
@@ -151,13 +151,15 @@ export default function Home() {
                 className={`feature-section ${chapter.reverse ? "reverse" : ""}`}
               >
                 <div className="feature-image">
-                  <Image 
-                    src={chapter.image} 
-                    alt={chapter.alt}
-                    width={500}
-                    height={400}
-                    className="w-full h-full object-cover rounded-lg"
-                  />
+                  <div className="image-frame">
+                    <Image 
+                      src={chapter.image} 
+                      alt={chapter.alt}
+                      width={500}
+                      height={400}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
                 <div className="feature-copy">
                   <p className="text-sm uppercase tracking-[0.35em] text-white/50">Editorial Section</p>

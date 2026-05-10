@@ -28,7 +28,7 @@ export default function LeadershipVisionPage() {
                   Margaret Omariba is a dedicated community leader, mentor, and servant of the people of London Ward. She is passionate about improving the lives of ordinary families through practical local programs that support youth, women, education, the environment, sports, and community welfare.
                 </p>
               </div>
-              <div className="rounded-[2rem] overflow-hidden border border-white/10 bg-white/5">
+              <div className="image-frame">
                 <Image
                   src="/images/profilephoto2.jpeg"
                   alt="Margaret Omariba profile"

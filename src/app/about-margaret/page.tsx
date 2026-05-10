@@ -53,13 +53,13 @@ export default function AboutMargaretPage() {
                   </li>
                 </ul>
               </div>
-              <div>
+              <div className="image-frame">
                 <Image
                   src="/images/profilephoto.jpeg"
                   alt="Margaret Omariba"
                   width={400}
                   height={400}
-                  className="rounded-2xl w-full h-auto object-cover"
+                  className="w-full h-auto object-cover"
                 />
               </div>
             </div>
@@ -75,39 +75,45 @@ export default function AboutMargaretPage() {
                 <p className="text-white/75 mb-6">
                   Margaret began community work by supporting neighborhood sports and youth mentorship, proving that leadership starts at the local level.
                 </p>
-                <Image
-                  src="/images/charity1.jpeg"
-                  alt="Youth Sports"
-                  width={300}
-                  height={300}
-                  className="rounded-lg w-full h-48 object-cover"
-                />
+                <div className="image-frame">
+                  <Image
+                    src="/images/charity1.jpeg"
+                    alt="Youth Sports"
+                    width={300}
+                    height={300}
+                    className="w-full h-48 object-cover"
+                  />
+                </div>
               </article>
               <article className="rounded-2xl border border-white/10 bg-white/5 p-8">
                 <h3 className="text-xl font-semibold text-white mb-4">Community impact</h3>
                 <p className="text-white/75 mb-6">
                   She has led tree planting campaigns, women's gatherings, and education support services that build trust across London Ward.
                 </p>
-                <Image
-                  src="/images/women1.jpeg"
-                  alt="Women Empowerment"
-                  width={300}
-                  height={300}
-                  className="rounded-lg w-full h-48 object-cover"
-                />
+                <div className="image-frame">
+                  <Image
+                    src="/images/women1.jpeg"
+                    alt="Women Empowerment"
+                    width={300}
+                    height={300}
+                    className="w-full h-48 object-cover"
+                  />
+                </div>
               </article>
               <article className="rounded-2xl border border-white/10 bg-white/5 p-8">
                 <h3 className="text-xl font-semibold text-white mb-4">Future ambition</h3>
                 <p className="text-white/75 mb-6">
                   Margaret sees community service as the foundation for stronger, more connected local governance.
                 </p>
-                <Image
-                  src="/images/charity2.jpeg"
-                  alt="Community Future"
-                  width={300}
-                  height={300}
-                  className="rounded-lg w-full h-48 object-cover"
-                />
+                <div className="image-frame">
+                  <Image
+                    src="/images/charity2.jpeg"
+                    alt="Community Future"
+                    width={300}
+                    height={300}
+                    className="w-full h-48 object-cover"
+                  />
+                </div>
               </article>
             </div>
           </div>

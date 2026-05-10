@@ -48,13 +48,15 @@ export default function ProgramsPage() {
             <div className="grid gap-8 md:grid-cols-2">
               {programs.map((program) => (
                 <article key={program.title} className="rounded-2xl border border-white/10 bg-white/5 overflow-hidden">
-                  <Image
-                    src={program.image}
-                    alt={program.title}
-                    width={400}
-                    height={300}
-                    className="w-full h-48 object-cover"
-                  />
+                  <div className="image-frame">
+                    <Image
+                      src={program.image}
+                      alt={program.title}
+                      width={400}
+                      height={300}
+                      className="w-full h-48 object-cover"
+                    />
+                  </div>
                   <div className="p-8">
                     <h2 className="text-xl font-semibold text-white mb-3">{program.title}</h2>
                     <p className="text-white/75 mb-6">{program.description}</p>

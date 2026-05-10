@@ -32,13 +32,15 @@ export default function GalleryPage() {
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
               {galleryItems.map((item) => (
                 <div key={item.src} className="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-                  <Image
-                    src={item.src}
-                    alt={item.title}
-                    width={700}
-                    height={500}
-                    className="w-full h-auto object-cover"
-                  />
+                  <div className="image-frame">
+                    <Image
+                      src={item.src}
+                      alt={item.title}
+                      width={700}
+                      height={500}
+                      className="w-full h-auto object-cover"
+                    />
+                  </div>
                   <div className="p-6">
                     <h3 className="text-lg font-semibold text-white">{item.title}</h3>
                   </div>
