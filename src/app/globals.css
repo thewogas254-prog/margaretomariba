@@ -2,16 +2,16 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #132238;
-  --surface: #1b2d46;
-  --navy: #132238;
-  --gold: #c6a76a;
+  --bg: #1d3e66;
+  --surface: #244a6e;
+  --navy: #1c3a61;
+  --gold: #c7a76e;
   --cream: #f5f1ea;
-  --text: #f3f3f3;
-  --muted: #c9d1d9;
-  --forest: #214034;
-  --charcoal: #0d1522;
-  --soft-white: rgba(255, 255, 255, 0.9);
+  --text: #f6efe7;
+  --muted: #cad3dc;
+  --forest: #27524b;
+  --charcoal: #142d4c;
+  --soft-white: rgba(255, 255, 255, 0.92);
   --font-cormorant: "Cormorant Garamond", Georgia, serif;
   --font-playfair: "Playfair Display", Georgia, serif;
   --font-inter: ui-sans-serif, system-ui, sans-serif;
@@ -58,7 +58,7 @@
   body {
     margin: 0;
     min-height: 100vh;
-    background: radial-gradient(circle at top, rgba(198, 167, 106, 0.08), transparent 30%), radial-gradient(circle at 20% 10%, rgba(255, 255, 255, 0.05), transparent 20%), var(--bg);
+    background: radial-gradient(circle at top, rgba(198, 167, 106, 0.1), transparent 28%), radial-gradient(circle at 18% 8%, rgba(255, 255, 255, 0.07), transparent 20%), var(--surface);
     color: var(--text);
     font-family: "Oxanium", system-ui, sans-serif;
     text-rendering: optimizeLegibility;
@@ -139,21 +139,23 @@
   }
 
   .section-light .text-white,
-  .section-light .text-white/50,
-  .section-light .text-white/60,
-  .section-light .text-white/70,
-  .section-light .text-white/75,
-  .section-light .text-white/80,
-  .section-light .text-white/85,
-  .section-light .text-white/90 {
+  .section-light .text-white\/50,
+  .section-light .text-white\/60,
+  .section-light .text-white\/70,
+  .section-light .text-white\/75,
+  .section-light .text-white\/80,
+  .section-light .text-white\/85,
+  .section-light .text-white\/90 {
     color: var(--navy) !important;
   }
 
-  .section-light .bg-white/5 {
+  .section-light .bg-white\/5 {
     background: rgba(245, 241, 234, 0.8) !important;
     background-size: cover;
     background-position: center;
     opacity: 0.98;
+  }
+
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -206,6 +208,7 @@
     border-radius: 32px;
     padding: 2.5rem;
     color: var(--navy);
+}
 
 .section {
   padding: 120px 4%;
